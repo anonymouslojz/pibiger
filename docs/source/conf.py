@@ -5,6 +5,13 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+from recommonmark.parser import CommonMarkParser
+
+source_parsers = {
+    '.md': CommonMarkParser,
+}
+
+source_suffix = ['.rst', '.md']
 
 project = 'pibiger'
 copyright = '2023, joe'
@@ -14,7 +21,8 @@ release = '0.0'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = [ 'recommonmark',
+    'sphinx_markdown_tables']
 
 templates_path = ['_templates']
 exclude_patterns = []
@@ -25,4 +33,4 @@ exclude_patterns = []
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_rtd_theme'
-html_static_path = ['_themes',]
+html_static_path = ['_static']
