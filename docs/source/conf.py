@@ -5,6 +5,8 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
+$ python
+import sphinx_rtd_theme
 
 project = 'pibiger'
 copyright = '2023, joe'
